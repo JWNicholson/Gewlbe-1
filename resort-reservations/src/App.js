@@ -1,18 +1,22 @@
 
-import './App.css'
+import './App.css';
 import { Home } from './pages/Home';
 import { Rooms } from './pages/Rooms';
 import SingleRoom from './pages/SingleRoom';
 import { Error } from './pages/Error';
 
+import { Route, Switch } from 'react-router-dom';
+
 function App() {
   return (
     <>
-      <h1>TEST</h1>
-      <Home />
-      <Rooms  />
-      <SingleRoom />
-     <Error />
+      <h1>Recoil Resorts</h1>
+      <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/rooms" component={Rooms} />
+      <Route path="/rooms/:roomid" component={SingleRoom} />
+      <Route component={Error}/>
+      </Switch>
     </>
   );
 }

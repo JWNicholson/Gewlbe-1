@@ -1,21 +1,21 @@
 
 import './App.css';
+import { Route, Switch } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Rooms } from './pages/Rooms';
 import SingleRoom from './pages/SingleRoom';
 import { Error } from './pages/Error';
-
-import { Route, Switch } from 'react-router-dom';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <>
-      <h1>Recoil Resorts</h1>
+      <Navbar />
       <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/rooms" component={Rooms} />
-      <Route path="/rooms/:roomid" component={SingleRoom} />
-      <Route component={Error}/>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/rooms" component={Rooms} />
+        <Route exact path="/rooms/:roomid" component={SingleRoom} />
+        <Route component={Error} />
       </Switch>
     </>
   );

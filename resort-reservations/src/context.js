@@ -19,7 +19,7 @@ class RoomProvider extends Component {
         //console.log(rooms)
 
         //room features filter
-        let featuredRooms = rooms.filter(room => room.feature === true)
+        let featuredRooms = rooms.filter(room => room.featured === true)
         this.setState({
             rooms, 
             featuredRooms,

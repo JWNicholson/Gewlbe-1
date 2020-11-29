@@ -103,7 +103,7 @@ export default [
         {
           fields: {
             file: {
-              url: img2
+             url: img2
             }
           }
         },

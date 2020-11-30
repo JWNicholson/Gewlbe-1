@@ -1,11 +1,15 @@
 import './App.css';
+import GameBoard from './components/GameBoard';
+
 
 function App() {
   return (
+
     <div className="App">
       <header className="App-header">
-      <h1 className="glow">Gamez</h1>
+        <h1 className="glow">Gamez</h1>
       </header>
+      <GameBoard />
     </div>
   );
 }

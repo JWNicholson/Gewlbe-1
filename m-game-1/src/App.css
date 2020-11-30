@@ -10,28 +10,25 @@ ul{
 
 
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: #232731;
+    
 }
 
 .App {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .App-header {
-  background-color: #232731;
   font-family: cursive;
-  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #f8f8ff;
 }
 
 .glow {
@@ -47,3 +44,30 @@ body {
 }
 
 
+.gameBoard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:960px;
+  height:960px;
+  color:#232731;
+  background-color: #ebfde4;
+  margin-top: 50px;
+}
+
+.game-container {
+  width:100%;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(15, 226, 8);
+  width:100%;
+  color:#f8f8ff;
+  text-shadow: 2px 2px 8px #07350A;
+
+  -webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.32);
+-moz-box-shadow:    0px 3px 4px 0px rgba(50, 50, 50, 0.32);
+box-shadow:         0px 3px 4px 0px rgba(50, 50, 50, 0.32);
+}

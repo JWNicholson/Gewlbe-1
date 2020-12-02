@@ -3,18 +3,33 @@
 ////
 // assign sentence to a variable
 
-let phrase = "He walked into the basement, and it was dark."
+const phrase ="He walked into the basement, and it was dark."
 
-// split into array
-let stepOne = phrase.split(" ")
+function reverseWords(str){
+    // split into array on empty spaces
+    return str.split(" ")
+    //map over each word using regex to only get characters - returns a matrix (an arry of arrays)
+    .map(word => word.split(/([a-zA-Z]+)/)
+        //map over each word - split characters and reverse
+        .map(word => word.split("").reverse()
+            // join characters
+            .join(""))
+
+        //join on results from second map
+        .join("")
+    )
+  //join results of main map into sentence  
+.join(" ")
+}
+
+
 
 //
-let x = stepTwo
-let y = x.reverse()
 
-console.log(stepOne)
-console.log(y)
+x = reverseWords(phrase)
 
-document.getElementById('solution-1').innerHTML = phrase ;
+console.log(x)
+
+document.getElementById('solution-1').innerHTML = x ;
 
 /////////end one
